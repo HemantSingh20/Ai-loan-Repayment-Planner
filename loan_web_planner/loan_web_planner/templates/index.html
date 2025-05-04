@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Loan Repayment Planner</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <h1>Loan Repayment Planner</h1>
+
+    <form id="loan-form">
+        <h2>Your Loans</h2>
+        <div id="loan-inputs-container">
+            <!-- Loan input fields will be added here by JavaScript -->
+            <div class="loan-entry">
+                <input type="text" placeholder="Loan Name (e.g., Car Loan)" class="loan-name" required>
+                <input type="number" step="0.01" min="0.01" placeholder="Current Balance ($)" class="loan-balance" required>
+                <input type="number" step="0.01" min="0" placeholder="Annual Rate (%)" class="loan-rate" required>
+                <input type="number" step="0.01" min="0.01" placeholder="Minimum Payment ($)" class="loan-min-payment" required>
+                <button type="button" class="remove-loan-btn">Remove</button>
+            </div>
+        </div>
+        <button type="button" id="add-loan-btn">Add Another Loan</button>
+
+        <h2>Your Budget</h2>
+        <label for="budget">Total Monthly Payment Budget ($):</label>
+        <input type="number" step="0.01" min="0.01" id="budget" name="budget" required>
+
+        <button type="submit">Calculate Repayment Plan</button>
+    </form>
+
+    <div id="results-container" style="margin-top: 20px;">
+        <h2>Results</h2>
+        <div id="error-message" class="error"></div>
+        <div id="summary"></div>
+        <div id="results-output">
+            <!-- Calculation results will be displayed here -->
+        </div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <!-- Use url_for for static files -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

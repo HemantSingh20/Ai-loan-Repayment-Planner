@@ -1,0 +1,122 @@
+/* static/css/style.css */
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2, h3 {
+    color: #333;
+}
+
+#loan-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.loan-entry {
+    display: grid; /* Use grid for alignment */
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive columns */
+    gap: 10px; /* Space between inputs */
+    padding: 15px;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    align-items: center; /* Align items vertically */
+}
+
+.loan-entry input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding in width */
+    width: 100%; /* Make inputs fill grid column */
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#budget {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+
+button {
+    padding: 10px 15px;
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4cae4c;
+}
+
+button.remove-loan-btn {
+    background-color: #d9534f;
+    padding: 5px 10px; /* Smaller button */
+    grid-column: span 1; /* Ensure it takes space */
+    justify-self: end; /* Align to the right */
+    margin-top: 0; /* Align with inputs */
+}
+
+button.remove-loan-btn:hover {
+    background-color: #c9302c;
+}
+
+#add-loan-btn {
+    background-color: #337ab7;
+}
+#add-loan-btn:hover {
+    background-color: #286090;
+}
+
+
+#results-container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.error {
+    color: #d9534f; /* Red color for errors */
+    font-weight: bold;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #d9534f;
+    background-color: #f2dede;
+    border-radius: 4px;
+}
+
+#summary p {
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+#results-output h4 {
+     margin-top: 15px;
+     margin-bottom: 5px;
+     color: #337ab7;
+}
+#results-output p {
+     margin: 3px 0 10px 10px; /* Indent results slightly */
+}
+#results-output hr {
+     margin: 15px 0;
+}
